@@ -69,3 +69,16 @@ footer {
   text-decoration: none;
   border-radius: 5px;
 }
+
+.demo-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.demo-card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
