@@ -315,3 +315,17 @@ footer {
     font-size: 1rem;
   }
 }
+
+/* Menu page */
+.menu-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.menu-page a {
+  font-size: 1.1rem;
+  color: #1f4fd8;
+  font-weight: bold;
+}
