@@ -1,0 +1,145 @@
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Global Styles ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #0b5ed7;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #0b5ed7;
+  color: #fff;
+  padding: 1.2rem 2rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+nav a {
+  color: #fff;
+  margin-right: 0.75rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Main Content ===== */
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  margin-bottom: 1rem;
+  color: #0b5ed7;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.hero img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+
+/* ===== Buttons ===== */
+.button {
+  display: inline-block;
+  background-color: #198754;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #157347;
+  text-decoration: none;
+}
+
+/* ===== Sections ===== */
+section {
+  margin-bottom: 2rem;
+}
+
+h2, h3 {
+  margin-bottom: 1rem;
+  color: #0b5ed7;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+}
+
+/* ===== Services ===== */
+.service {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+
+
+/* ===== Footer ===== */
+footer {
+  background-color: #e9ecef;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* ===== Images ===== */
+.hero img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.service img {
+  max-width: 66%;
+  display: block;
+  margin: 0 auto 0.75rem;
+  border-radius: 6px;
+}
+
+
+

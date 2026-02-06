@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forevillage | Of the Village, By the Village, For the Village</title>
+    <style>
+        :root {
+            --bg-color: #fdfcf9; /* Light Linen */
+            --primary-text: #1a2a1a; /* Deep Forest Green */
+            --accent-color: #b08d57; /* Warm Gold */
+            --secondary-text: #555;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif; /* You'd link this font in a real site */
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-text);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .slogan {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-family: serif;
+            font-style: italic;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        .sub-slogan {
+            font-size: 1.1rem;
+            color: var(--secondary-text);
+            margin-bottom: 3rem;
+            letter-spacing: 1px;
+        }
+
+        /* The Entrance Button */
+        .entrance-card {
+            border: 1px solid #e0e0e0;
+            padding: 2.5rem;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s, border-color 0.3s;
+            text-decoration: none;
+            color: inherit;
+            max-width: 400px;
+        }
+
+        .entrance-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .entrance-card h2 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: var(--primary-text);
+        }
+
+        .entrance-card p {
+            margin: 0;
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .arrow {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 5%;
+            border-top: 1px solid #eee;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Forevillage</div>
+        <div class="nav-links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="slogan">"Of the Village, By the Village, For the Village."</h1>
+        <p class="sub-slogan">Building digital homes for local businesses and creators.</p>
+
+        <a href="https://studio.forevillage.com" class="entrance-card">
+            <h2>GET YOUR OWN WEBSITE</h2>
+            <p>Custom-built web presence designed to grow your business.</p>
+            <span class="arrow">Enter the Studio &rarr;</span>
+        </a>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Disclaimer</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms</a>
+        </div>
+        <p>&copy; 2026 Forevillage. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

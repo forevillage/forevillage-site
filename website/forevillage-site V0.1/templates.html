@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates – ForeVillage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>ForeVillage</h1>
+  <nav class="main-nav">
+	  <a href="index.html">Home</a>
+	  <a href="templates.html">Templates</a>
+	  <a href="faq.html">FAQ</a>
+	  <a href="order.html">Order</a>
+	  <a href="about.html">About</a>
+	  <a href="contact.html">Contact</a>
+
+	  <a href="faq.html" class="mobile-menu">Menu ☰</a>
+	</nav>
+</header>
+
+<main>
+
+  <section class="intro">
+    <h2>Website Templates for Small Businesses</h2>
+    <p>
+      Browse ready-to-launch website designs.
+      Each template can be customized with your content.
+    </p>
+  </section>
+
+  <section class="templates-carousel">
+
+    <button class="carousel-arrow left" aria-label="Previous">‹</button>
+
+    <div class="carousel-window">
+      <div class="carousel-track">
+        		
+		<div class="template-card">
+		  <a
+			href="https://sunshinebaja.forevillage.com"
+			target="_blank"
+			rel="noopener"
+			class="template-link"
+		  >
+			<div class="template-preview">
+			  <img
+				src="images/templates/sunshinebaja.jpg"
+				alt="Sunshine Baja Restaurant website template"
+			  >
+			  <div class="template-overlay">
+				<span>View Live Demo</span>
+			  </div>
+			</div>
+
+			<div class="template-info">
+			  <p>Restaurant & Café website</p>
+			</div>
+		  </a>
+		</div>
+
+        
+		<div class="template-card">
+		  <a
+			href="https://mindflow.forevillage.com"
+			target="_blank"
+			rel="noopener"
+			class="template-link"
+		  >
+			<div class="template-preview">
+			  <img
+				src="images/templates/mindflow.jpg"
+				alt="MindFlow Yoga Studio website template"
+			  >
+			  <div class="template-overlay">
+				<span>View Live Demo</span>
+			  </div>
+			</div>
+
+			<div class="template-info">
+			  <p>Yoga and Wellness Studio website</p>
+			</div>
+		  </a>
+		</div>
+        		
+		<div class="template-card">
+		  <a
+			href="https://brighthome.forevillage.com"
+			target="_blank"
+			rel="noopener"
+			class="template-link"
+		  >
+			<div class="template-preview">
+			  <img
+				src="images/templates/brighthome.jpg"
+				alt="BrightHome Services website template"
+			  >
+			  <div class="template-overlay">
+				<span>View Live Demo</span>
+			  </div>
+			</div>
+
+			<div class="template-info">
+			  <p>Home Service website</p>
+			</div>
+		  </a>
+		</div>
+			        
+		
+		<div class="template-card">
+		  <a
+			href="https://timelesstrim.forevillage.com"
+			target="_blank"
+			rel="noopener"
+			class="template-link"
+		  >
+			<div class="template-preview">
+			  <img
+				src="images/templates/timelesstrim.jpg"
+				alt="TimelessTrim website template"
+			  >
+			  <div class="template-overlay">
+				<span>View Live Demo</span>
+			  </div>
+			</div>
+
+			<div class="template-info">
+			  <p>Barbershop website</p>
+			</div>
+		  </a>
+		</div>        
+		
+		<div class="template-card">
+		  <a
+			href="https://clearpath.forevillage.com"
+			target="_blank"
+			rel="noopener"
+			class="template-link"
+		  >
+			<div class="template-preview">
+			  <img
+				src="images/templates/clearpath.jpg"
+				alt="ClearPath website template"
+			  >
+			  <div class="template-overlay">
+				<span>View Live Demo</span>
+			  </div>
+			</div>
+
+			<div class="template-info">
+			  <p>Consulting website</p>
+			</div>
+		  </a>
+		</div>
+
+      </div>
+    </div>
+
+    <button class="carousel-arrow right" aria-label="Next">›</button>
+
+  </section>
+
+</main>
+
+<section class="intro">
+  <p style="font-size:0.95rem;">
+    Like one of these website designs?
+  </p>
+  <a href="order.html" class="hero-button" style="margin-top:1rem;">
+    Start My Website
+  </a>
+</section>
+
+
+<footer>
+  <p>© 2026 ForeVillage</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  let cards = Array.from(document.querySelectorAll(".template-card"));
+  const prevBtn = document.querySelector(".carousel-arrow.left");
+  const nextBtn = document.querySelector(".carousel-arrow.right");
+  const carousel = document.querySelector(".templates-carousel");
+
+  const visibleCount = 3;
+  const cardGap = 16;
+  const delay = 4000;
+
+  let index = visibleCount;
+  let intervalId = null;
+
+  /* Clone cards */
+  const headClones = cards.slice(0, visibleCount).map(c => c.cloneNode(true));
+  const tailClones = cards.slice(-visibleCount).map(c => c.cloneNode(true));
+
+  tailClones.forEach(c => track.prepend(c));
+  headClones.forEach(c => track.append(c));
+
+  cards = Array.from(track.children);
+
+  function cardWidth() {
+    return cards[0].offsetWidth + cardGap;
+  }
+
+  function update(animate = true) {
+    track.style.transition = animate ? "transform 0.5s ease" : "none";
+    track.style.transform = `translateX(-${index * cardWidth()}px)`;
+  }
+
+  function next() {
+    index++;
+    update();
+    if (index === cards.length - visibleCount) {
+      setTimeout(() => {
+        index = visibleCount;
+        update(false);
+      }, 500);
+    }
+  }
+
+  function prev() {
+    index--;
+    update();
+    if (index === 0) {
+      setTimeout(() => {
+        index = cards.length - visibleCount * 2;
+        update(false);
+      }, 500);
+    }
+  }
+
+  function start() {
+    stop();
+    intervalId = setInterval(next, delay);
+  }
+
+  function stop() {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+  }
+
+  nextBtn.addEventListener("click", () => {
+    next();
+    start();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    prev();
+    start();
+  });
+
+  carousel.addEventListener("mouseenter", stop);
+  carousel.addEventListener("mouseleave", start);
+
+  update(false);
+  start();
+});
+</script>
+
+
+
+</body>
+</html>

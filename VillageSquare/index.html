@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForeVillage</title>
+
+    <style>
+        :root {
+            --bg-color: #fdfcf9;          /* Light Linen */
+            --primary-text: #1a2a1a;     /* Deep Forest Green */
+            --secondary-text: #555;
+            --accent-color: #b08d57;     /* Warm Gold */
+            --border-light: #e6e4df;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont,
+                         "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--primary-text);
+        }
+
+        /* Header */
+        header {
+            padding: 2rem 6%;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .logo {
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Main */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 8%;
+            text-align: center;
+        }
+
+        .square {
+            max-width: 720px;
+        }
+
+        .slogan {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-bottom: 2.2rem;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--secondary-text);
+            margin-bottom: 2.8rem;
+        }
+
+        .expectation {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--secondary-text);
+            margin-bottom: 3.2rem;
+        }
+
+        /* Entrance */
+        .entrance {
+            display: inline-block;
+            padding: 1.1rem 2.6rem;
+            border: 2px solid var(--primary-text);
+            background-color: var(--primary-text);
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            transition: all 0.25s ease;
+        }
+
+        .entrance:hover {
+            background-color: transparent;
+            color: var(--primary-text);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 6%;
+            border-top: 1px solid var(--border-light);
+            font-size: 0.7rem;
+            color: #888;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        footer a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 0.75rem;
+        }
+
+        footer a:hover {
+            color: var(--primary-text);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">ForeVillage</div>
+    </header>
+
+    <main>
+        <section class="square">
+			<h1 class="slogan">
+				Of the Village,<br>
+				By the Village,<br>
+				For the Village.
+			</h1>
+
+			<p class="description">
+				ForeVillage is a shared ground for practical, human-scale tools.
+				A community where people come together to build and share
+				practical, human-scale tools — simply made, fully owned,
+				and meant to last.
+			</p>
+
+			<!-- Entrance to Website section -->
+			<a class="entrance" href="../website/front/">
+			<!--<a class="entrance">-->
+				START YOUR WEBSITE
+			</a>
+
+			<!-- Optional: small note -->
+			<p class="expectation">
+				Explore ready-to-launch websites made simple for small businesses.
+			</p>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+        </div>
+        <p>© 2026 FOREVILLAGE</p>
+    </footer>
+
+</body>
+</html>
